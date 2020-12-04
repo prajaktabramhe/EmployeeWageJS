@@ -6,13 +6,16 @@ class EmployeePayrollData {
     this.gender = params[3];
     this.date = params[4];
   }
-  get id() {
+  get id() //use get function
+  {
     return this._id;
   }
-  set id(Id) {
+  set id(Id) 
+  {
     let i = parseInt(Id);
-    let idRegex = RegExp("^[1-9][0-9]*$");
-    try {
+    let idRegex = RegExp("^[1-9][0-9]*$"); // use regExp
+    try 
+    {
       if (idRegex.test(i)) {
         this._id = i;
       } else {
@@ -22,10 +25,12 @@ class EmployeePayrollData {
       console.error(error);
     }
   }
-  get name() {
+  get name() 
+  {
     return this._name;
   }
-  set name(name) {
+  set name(name) 
+  {
     let nameRegex = RegExp("^[A-Z]{1}[a-z]{3,}$");
     try {
       if (nameRegex.test(name)) this._name = name;
@@ -34,7 +39,8 @@ class EmployeePayrollData {
       console.error(error);
     }
   }
-  get salary() {
+  get salary() 
+  {
     return this._salary;
   }
   set salary(salary) {
@@ -46,11 +52,13 @@ class EmployeePayrollData {
       } else {
         throw "Invalid input for salary";
       }
-    } catch (error) {
+    } catch (error)
+     {
       console.error(error);
     }
   }
-  get gender() {
+  get gender() 
+  {
     return this._gender;
   }
   set gender(gender) {
@@ -61,17 +69,20 @@ class EmployeePayrollData {
       } else {
         throw "Invalid input for gender";
       }
-    } catch (error) {
+    } catch (error)
+    {
       console.error();
     }
   }
-  get date() {
+  get date() 
+  {
     return this._date;
   }
   set date(date) {
     this._date = date;
   }
-  toString() {
+  toString()
+  {
     const options = { year: "numeric", month: "long", day: "numeric" };
     const empDate =
       this.date === undefined
