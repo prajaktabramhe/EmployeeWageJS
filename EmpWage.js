@@ -15,6 +15,7 @@ let totalEmpHrs = 0;
 let totalWorkingDays = 0;
 let totalEmpWage = 0;
 
+//checking employee is present or not
 function getWorkingHours(empCheck) {
   switch (empCheck) {
     case IS_PART_TIME:
