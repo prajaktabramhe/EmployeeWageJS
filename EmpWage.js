@@ -175,8 +175,7 @@ empDailyHrsMap.forEach((value, key, Map) => {
 console.log("Full Working Days: " + fullWorkingDays);
 console.log("Part Working Days: " + partWorkingDays);
 console.log("Non Working Days: " + nonWorkingDays);
-console.log(
-  "UC10 showing Daily Hours Worked And Wage Earned : " + empDailyHrsAndWageArr
+console.log("UC10 showing Daily Hours Worked And Wage Earned : " + empDailyHrsAndWageArr
 );
 
 //UC_11A - UC_11D
@@ -205,7 +204,7 @@ empDailyHrsAndWageArr
 let partWorkingDayStrArr = empDailyHrsAndWageArr
   .filter((dailyHrsAndWage) => dailyHrsAndWage.dailyHours == 4)
   .map((dailyHrsAndWage) => dailyHrsAndWage.toString());
-console.log("\nUC_11C PartWorkingDayString" + partWorkingDayStrArr);
+console.log("UC_11C PartWorkingDayString" + partWorkingDayStrArr);
 
 let nonWorkingDayNums = empDailyHrsAndWageArr
   .filter((dailyHrsAndWage) => dailyHrsAndWage.dailyHours == 0)
